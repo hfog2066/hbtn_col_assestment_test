@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="card card-body">
+    <h1>ALL USERS INFORMATION</h1>
+    <div class=".col-md-7">
+        <table class="table table-striped table-bordered bg-white table-sm">
+            <thead>
+                <tr>
+                    <td>NAME</td>
+                    <td>LASTNAME</td>
+                    <td>GOV_ID</td>
+                    <td>EMAIL</td>
+                    <td>COMPANY</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for info in data_one %}
+                <tr>
+                    <td>{{ info.get("name") }}</td>
+                    <td>{{ info.get("lastname") }}</td>
+                    <td>{{ info.get("govid") }}</td>
+                    <td>{{ info.get("email") }}</td>
+                    <td>{{ info.get("company") }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="form-group">
+        <button type="button" onclick="location.href='/home'" class="btn btn-primary btn-block">
+            Back to Home
+        </button>
+    </div>
+</div>
+{% endblock %}

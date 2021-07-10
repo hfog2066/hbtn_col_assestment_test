@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="card card-body">
+    <form action="signupinfo" method="POST">
+        <div class="form-group">
+            <input type="text" name="signName" placeholder="Name" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="signLastname" placeholder="Lastname" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="signGovid" placeholder="Goverment ID" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="signEmail" placeholder="Email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="signCompany" placeholder="Company" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="password" name="signPassword" placeholder="Password" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+                SIGN UP
+            </button>
+            <br><br>
+            <p class="message">Already registered? <a href="/">Login here</a></p>
+        </div>
+    </form>
+</div>
+</div>
+
+{% endblock %}

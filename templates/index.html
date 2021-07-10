@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="card card-body">
+    <form action="/" method="post">
+        <div class="form-group">
+            <input type="text" name="logemail" placeholder="Email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <input type="password" name="logPassword" placeholder="Password" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+                Log in
+            </button>
+            <br><br>
+            <p class="message">Not registered? <a href="signup">Create an account</a></p>
+        </div>
+
+    </form>
+</div>
+</div>
+
+{% endblock %}
